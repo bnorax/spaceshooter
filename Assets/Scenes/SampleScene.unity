@@ -269,6 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec70790eb65d50a4db97cbbd6707aa37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipSettings: {fileID: 11400000, guid: 3ab0352f032a77b4183f56c18b1f6dde, type: 2}
   shipGuns:
   - {fileID: 425689280}
   - {fileID: 924404184}
@@ -498,7 +499,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778190798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.401, y: 0.841, z: -1}
+  m_LocalPosition: {x: 0.401, y: 0.841, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
