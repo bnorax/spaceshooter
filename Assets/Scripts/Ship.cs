@@ -11,7 +11,7 @@ public class Ship : MonoBehaviour
     
     private void Awake()
     {
-        _shipInput = new PCControls(); ;
+        _shipInput = shipSettings.Enemy? new AIControls(transform, shipSettings): new PCControls();
         _shipMotor = new ShipMotor(_shipInput, transform, shipSettings);
     }
 

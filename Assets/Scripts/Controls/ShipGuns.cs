@@ -21,8 +21,10 @@ public class ShipGuns : MonoBehaviour
             var shot = Instantiate(shotPrefab, gun.transform.position, gun.transform.rotation);
             
             var projectile = shot.GetComponent<Projectile>();
-            if (projectile) projectile.speed = shipSettings.ProjectileSpeed;
-           // if(!projectile) projectile.speed = shipSettings.ProjectileSpeed;
+            if (projectile)
+                projectile.speed =
+                    shipSettings.Enemy ? shipSettings.ProjectileSpeed * -1 : shipSettings.ProjectileSpeed;
+            // if(!projectile) projectile.speed = shipSettings.ProjectileSpeed;
         }
     }
 }

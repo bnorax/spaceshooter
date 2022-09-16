@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1cd05121b6eb5e44b3541de8e26a273, type: 3}
-  m_Name: FirstShip
+  m_Name: EnemyShip
   m_EditorClassIdentifier: 
-  moveSpeed: 6
-  projectileSpeed: 9
+  enemy: 1
+  moveSpeed: 5
+  projectileSpeed: 10
+  boundary: 2
