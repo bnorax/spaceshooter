@@ -16,6 +16,7 @@ public class ShipMotor
     public void Tick()
     {
         //_transform.Rotate(Time.deltaTime*_shipInput.*Vector2.up);
-        _transform.position += _shipInput.Position*(Time.deltaTime*_shipSettings.MoveSpeed);
+        _transform.position += _shipInput.Direction*(Time.deltaTime*_shipSettings.MoveSpeed);
+        _transform.Rotate(_shipInput.Rotation.x, _shipInput.Rotation.y, 0f);
     }
 }

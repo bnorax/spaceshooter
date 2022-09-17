@@ -4,5 +4,6 @@ public interface IShipInput
 {
     void ReadInput();
     bool Fire();
-    Vector3 Position { get; }
+    Vector3 Direction { get; }
+    Vector3 Rotation { get; }
 }

@@ -21,7 +21,7 @@ public class AIControls : IShipInput
         // _transform.position = position;
 
         var deltaX = target * Time.deltaTime * _settings.MoveSpeed*100f;
-        Position = new Vector3(
+        Direction = new Vector3(
             target-_transform.position.x, 0, 0);
     }
 
@@ -34,5 +34,6 @@ public class AIControls : IShipInput
         }
         return false;
     }
-    public Vector3 Position { get; private set; }
+    public Vector3 Direction { get; private set; }
+    public Vector3 Rotation { get; private set; }
 }
