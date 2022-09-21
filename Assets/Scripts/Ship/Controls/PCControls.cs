@@ -18,8 +18,7 @@ public class PCControls : IShipInput
     {
         _direction.Set(Input.GetAxis("Horizontal"), 
             Input.GetAxis("Vertical"), 0);
-        if(_settings.Wiggle) 
-            _rotation.Set(0f, _direction.x, 0f);
+        _rotation.Set(0f, _direction.x, 0f);
             
         Direction = _direction; //for now? testing
         Rotation = _rotation;

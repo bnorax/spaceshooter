@@ -165,9 +165,6 @@ GameObject:
   m_Component:
   - component: {fileID: 387398757}
   - component: {fileID: 387398759}
-  - component: {fileID: 387398758}
-  - component: {fileID: 387398760}
-  - component: {fileID: 387398761}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -182,30 +179,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387398756}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -3, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 425689281}
-  - {fileID: 924404185}
+  m_Children: []
   m_Father: {fileID: 1088974250}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &387398758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387398756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ae3673d5f1290408a79727ccf57bb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shipSettings: {fileID: 11400000, guid: 3ab0352f032a77b4183f56c18b1f6dde, type: 2}
-  shipGuns: {fileID: 387398760}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!212 &387398759
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -258,35 +239,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &387398760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387398756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec70790eb65d50a4db97cbbd6707aa37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shipSettings: {fileID: 11400000, guid: 3ab0352f032a77b4183f56c18b1f6dde, type: 2}
-  shipGuns:
-  - {fileID: 425689280}
-  - {fileID: 924404184}
-  shotPrefab: {fileID: 6489530765503861883, guid: 05a98108daa985e4da9d7a8caa1de696, type: 3}
---- !u!114 &387398761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387398756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e66885c4c44b13e49999c531b438acd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &401551573
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,12 +347,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425689280}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.48000002, y: 0.5, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 387398757}
-  m_RootOrder: 0
+  m_Father: {fileID: 1088974250}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -616,12 +568,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924404184}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.48000002, y: 0.5, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 387398757}
-  m_RootOrder: 1
+  m_Father: {fileID: 1088974250}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1088974249
 GameObject:
@@ -633,6 +585,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1088974250}
   - component: {fileID: 1088974251}
+  - component: {fileID: 1088974254}
+  - component: {fileID: 1088974253}
+  - component: {fileID: 1088974255}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -648,11 +603,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088974249}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 387398757}
+  - {fileID: 425689281}
+  - {fileID: 924404185}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -667,6 +624,50 @@ SortingGroup:
   m_SortingLayerID: -1259120813
   m_SortingLayer: 3
   m_SortingOrder: 0
+--- !u!114 &1088974253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088974249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec70790eb65d50a4db97cbbd6707aa37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipSettings: {fileID: 11400000, guid: 3ab0352f032a77b4183f56c18b1f6dde, type: 2}
+  shipGuns:
+  - {fileID: 425689280}
+  - {fileID: 924404184}
+  shotPrefab: {fileID: 6489530765503861883, guid: 05a98108daa985e4da9d7a8caa1de696, type: 3}
+--- !u!114 &1088974254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088974249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ae3673d5f1290408a79727ccf57bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipSettings: {fileID: 11400000, guid: 3ab0352f032a77b4183f56c18b1f6dde, type: 2}
+  shipGuns: {fileID: 1088974253}
+--- !u!114 &1088974255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088974249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e66885c4c44b13e49999c531b438acd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 387398759}
 --- !u!1 &1098587572
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,6 +906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e66885c4c44b13e49999c531b438acd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sprite: {fileID: 1447161435}
 --- !u!1 &1994062607
 GameObject:
   m_ObjectHideFlags: 0
