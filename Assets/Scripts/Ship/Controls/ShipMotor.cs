@@ -6,8 +6,10 @@ public class ShipMotor
     private readonly Transform _transform;
     private Transform _spriteObjectTransform;
     private readonly ShipSettings _shipSettings;
-    private Vector3 _rotation;
-    //private readonl
+
+    // replace this with serializefield or something
+    private Vector3 _defaultAngle = new Vector3(0f, 180f, 0f);
+    
     public ShipMotor(IShipInput shipInput, Transform transform, ShipSettings shipSettings)
     {
         _shipInput = shipInput;
@@ -18,18 +20,15 @@ public class ShipMotor
 
     public void Tick()
     {
-        //_transform.Rotate(Time.deltaTime*_shipInput.*Vector2.up);
         _transform.position += _shipInput.Direction*(Time.deltaTime*_shipSettings.MoveSpeed);
         if (_shipSettings.Wiggle)
-            Wiggle();
-        else
-            _rotation.Set(0, 180f, 0);
-        _spriteObjectTransform.rotation = Quaternion.Euler(_rotation);
+            Wiggle(_shipInput.TargetRotation);
     }
     
-    private void Wiggle()
+    private void Wiggle(Vector3 rotation)
     {
-        _spriteObjectTransform.Rotate(0f, _shipInput.Rotation.y, 0f);
-        _rotation.y = Mathf.Clamp(_spriteObjectTransform.eulerAngles.y, 180f-_shipSettings.WiggleBoundaries, 180f+_shipSettings.WiggleBoundaries);
+        // Multiply rotation by Time.deltaTime for framerate independency
+        _spriteObjectTransform.rotation = Quaternion.RotateTowards(_spriteObjectTransform.rotation,
+            Quaternion.Euler(_defaultAngle + rotation), 60f * Time.deltaTime);
     }
 }

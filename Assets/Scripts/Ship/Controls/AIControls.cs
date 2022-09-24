@@ -35,5 +35,5 @@ public class AIControls : IShipInput
         return false;
     }
     public Vector3 Direction { get; private set; }
-    public Vector3 Rotation { get; private set; }
+    public Vector3 TargetRotation { get; private set; }
 }

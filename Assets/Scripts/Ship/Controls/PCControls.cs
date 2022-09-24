@@ -4,7 +4,6 @@ using UnityEngine;
 public class PCControls : IShipInput
 {
     private Vector3 _direction;
-    private Vector3 _rotation;
     private Transform _transform;
     private ShipSettings _settings;
     
@@ -18,10 +17,12 @@ public class PCControls : IShipInput
     {
         _direction.Set(Input.GetAxis("Horizontal"), 
             Input.GetAxis("Vertical"), 0);
-        _rotation.Set(0f, _direction.x, 0f);
             
         Direction = _direction; //for now? testing
-        Rotation = _rotation;
+        // So, basically, we set where we want to rotate base on the input axis
+        // With joysticks it will also work gradually - rotating it half way will move you at half speed and rotate the ship half the angle
+        // The ship also returns at zero rotation if isnt given any input, so it wont stay sided (as it was in your implementation)
+        TargetRotation = new Vector3(0f, _direction.x * _settings.WiggleBoundaries, 0f);
     }
 
     public bool Fire()
@@ -29,6 +30,6 @@ public class PCControls : IShipInput
         return Input.GetMouseButtonDown(0);
     }
     public Vector3 Direction { get; private set; }
-    public Vector3 Rotation { get; private set; }
+    public Vector3 TargetRotation { get; private set; }
 
 }
