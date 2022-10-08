@@ -11,7 +11,12 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        col.gameObject.SetActive(false);
+        GameObject target;
+        (target = col.gameObject).SetActive(false);
+        Destroy(target);
+        GameObject projectile;
+        (projectile = this.gameObject).SetActive(false);
+        Destroy(projectile);
         Debug.Log("dsa");
     }
 

@@ -15,6 +15,7 @@ public class ShipGuns : MonoBehaviour
 
     public void Fire()
     {
+        if(!shipSettings.Shoot) return;
         foreach (var gun in shipGuns)
         {
             

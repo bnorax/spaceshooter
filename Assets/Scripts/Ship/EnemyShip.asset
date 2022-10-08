@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: EnemyShip
   m_EditorClassIdentifier: 
   enemy: 1
-  moveSpeed: 5
+  shoot: 1
+  spawn: 1
+  wiggle: 0
+  wiggleBoundaries: 270
+  moveSpeed: 1
   projectileSpeed: 10
   boundary: 2

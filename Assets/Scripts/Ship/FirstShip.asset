@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: FirstShip
   m_EditorClassIdentifier: 
   enemy: 0
+  shoot: 1
+  spawn: 0
   wiggle: 1
   wiggleBoundaries: 35
   moveSpeed: 6
