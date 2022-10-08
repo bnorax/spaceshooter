@@ -9,6 +9,12 @@ public class Projectile : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        col.gameObject.SetActive(false);
+        Debug.Log("dsa");
+    }
+
     private void Update()
     {
         transform.Translate(0, speed*Time.deltaTime, 0);

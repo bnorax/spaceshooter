@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5947661010952417355}
   - component: {fileID: 5854940659357719700}
   - component: {fileID: 8496265817923088609}
+  - component: {fileID: 4167427908140204073}
   m_Layer: 0
   m_Name: Shot
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6489530765503861883}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -110,3 +111,19 @@ SortingGroup:
   m_SortingLayerID: -1725125441
   m_SortingLayer: 2
   m_SortingOrder: 0
+--- !u!70 &4167427908140204073
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6489530765503861883}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 2}
+  m_Direction: 0
