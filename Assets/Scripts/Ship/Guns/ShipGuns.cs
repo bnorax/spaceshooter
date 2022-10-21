@@ -7,10 +7,11 @@ public class ShipGuns : MonoBehaviour
     [SerializeField]private ShipSettings shipSettings;
     [SerializeField] private GameObject[] shipGuns;
     [SerializeField] private GameObject shotPrefab;
+    public float projectileSpeed;
 
     private void Awake()
     {
-        
+        projectileSpeed = shipSettings.ProjectileSpeed;
     }
 
     public void Fire()
@@ -24,7 +25,7 @@ public class ShipGuns : MonoBehaviour
             var projectile = shot.GetComponent<Projectile>();
             if (projectile)
                 projectile.speed =
-                    shipSettings.Enemy ? shipSettings.ProjectileSpeed * -1 : shipSettings.ProjectileSpeed;
+                    shipSettings.Enemy ? projectileSpeed * -1 : projectileSpeed;
             // if(!projectile) projectile.speed = shipSettings.ProjectileSpeed;
         }
     }
